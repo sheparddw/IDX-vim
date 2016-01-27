@@ -2,11 +2,14 @@ set t_Co=256 " Sets terminal to use 256 colors for CSApprox
 
 source ~/.vim/bundles.vim
 
-colorscheme dante2
+colorscheme PaperColor
+set background=dark
+
 source ~/.vim/idx.vim
 " set commands {{{
 "set fo-=t fo-=o fo-=r " don't continue comments after singline line comments or when using oO, also don't wrap text
 set cmdheight=2 " Number of screen lines to use for the ocmmand-line
+set number " always show line numbers
 set backspace=indent,eol,start " places <bs> and co. work
 set ruler " Show line number in bottom-right of screen
 set nowrap " Don't wrap long lines (soft wrap)
@@ -87,6 +90,8 @@ let g:phpcomplete_index_composer_command = 'composer'
 " NERDComment options
 let NERDSpaceDelims = 1
 
+nmap <C-b> :NERDTreeToggle<cr>
+
 " set php syntax options
 " EVERY string is treated as a possible mysql query and formatted as such, so this is not a good option.
 let php_sql_query = 0 " Don't highlight SQL in strings.
@@ -126,6 +131,18 @@ nmap du :diffu<cr>
 nmap Y y$
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<c-r>=current_reg<cr><esc>:let @" = current_reg<cr>
 nnoremap <space> za
+
+"Easy escaping to normal model
+imap jj <esc>
+" Down is really the next line
+nnoremap j gj
+nnoremap k gk
+
+
+set mouse=a
+"Auto change directory to match current file ,cd
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+
 "vmap <leader>as :s/\%V(\(.\{-}\), \?\(.*\)\%V)/(\2, \1)<cr>
 " }}}
 

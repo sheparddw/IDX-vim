@@ -50,6 +50,8 @@ NeoBundle 'tacahiroy/ctrlp-funky'
 NeoBundle 'chrisbra/csv.vim'
 " Display your undo history in a graph.
 NeoBundle 'mbbill/undotree'
+" Plugin for File Tree
+NeoBundle 'scrooloose/nerdtree.git'
 
 if has('python')
 	" Swap parameters of a function or a comma separated list with a single command.
@@ -83,7 +85,7 @@ NeoBundle 'Shougo/vimproc', {
 	\ }
 
 " A fast, extensible, context aware autocomplete plugin for PHP composer projects with code inspection features.
-NeoBundle 'm2mdas/phpcomplete-extended'
+" NeoBundle 'm2mdas/phpcomplete-extended'
 
 """ Indenting
 " PHP Indenting
