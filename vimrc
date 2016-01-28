@@ -40,6 +40,10 @@ set laststatus=2
 set spelllang=en_us " Define the region for spell checking
 set spellfile=~/.vim/spell/en.utf-8.add
 set sps+=10 " Limit the number of suggestions shown to 10.
+" Switch tabs to spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Options that require version 7.4 or higher.
 if v:version > 740
@@ -90,7 +94,6 @@ let g:phpcomplete_index_composer_command = 'composer'
 " NERDComment options
 let NERDSpaceDelims = 1
 
-nmap <C-b> :NERDTreeToggle<cr>
 
 " set php syntax options
 " EVERY string is treated as a possible mysql query and formatted as such, so this is not a good option.
@@ -138,6 +141,31 @@ imap jj <esc>
 nnoremap j gj
 nnoremap k gk
 
+" CtrlP Stuff
+
+" Familiar commands for file/symbol browsing
+map <D-p> :CtrlP<cr>
+map <C-r> :CtrlPBufTag<cr>
+
+" I don't want to pull up these folders/files when calling CtrlP
+set wildignore+=*/vendor/**
+set wildignore+=*/node_modules/**
+set wildignore+=*/public/forum/**
+
+" Open splits
+nmap vs :vsplit<cr>
+nmap sp :split<cr>
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Create split below
+nmap :sp :rightbelow sp<cr>
+
+" Map NerdTree for easy file navigation
+nmap <C-b> :NERDTreeToggle<cr>
 
 set mouse=a
 "Auto change directory to match current file ,cd
