@@ -12,7 +12,7 @@ set cmdheight=2 " Number of screen lines to use for the ocmmand-line
 set number " always show line numbers
 set backspace=indent,eol,start " places <bs> and co. work
 set ruler " Show line number in bottom-right of screen
-set nowrap " Don't wrap long lines (soft wrap)
+set wrap " Wrap long lines (soft wrap)
 set wmh=0 " Minimum split window height
 set wmw=0 " Minimum split window width
 set ic " search ignores case
@@ -135,6 +135,14 @@ nmap Y y$
 vnoremap p <Esc>:let current_reg = @"<CR>gvs<c-r>=current_reg<cr><esc>:let @" = current_reg<cr>
 nnoremap <space> za
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saves
+nmap <leader>w :w!<cr>
+
 "Easy escaping to normal model
 imap jj <esc>
 " Down is really the next line
@@ -145,7 +153,7 @@ nnoremap k gk
 
 " Familiar commands for file/symbol browsing
 map <D-p> :CtrlP<cr>
-map <C-r> :CtrlPBufTag<cr>
+" map <C-r> :CtrlPBufTag<cr>
 
 " I don't want to pull up these folders/files when calling CtrlP
 set wildignore+=*/vendor/**
