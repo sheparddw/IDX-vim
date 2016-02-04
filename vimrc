@@ -13,6 +13,8 @@ set number " always show line numbers
 set backspace=indent,eol,start " places <bs> and co. work
 set ruler " Show line number in bottom-right of screen
 set wrap " Wrap long lines (soft wrap)
+set linebreak " only wrap on breakat characters
+set nolist " list disables linebreak
 set wmh=0 " Minimum split window height
 set wmw=0 " Minimum split window width
 set ic " search ignores case
@@ -34,7 +36,8 @@ set scrolloff=1 " Always have at least one line above or below the cursor.
 set foldmethod=marker
 set foldlevelstart=99 " Default to folds open
 set wildignore+=*.svn,vendor " Ignore .svn directories and composer vendor directory for file completion and such.
-set textwidth=115 " Maximum width of text that is being inserted
+set textwidth=0 " Maximum width of text that is being inserted
+set wrapmargin=0 " 
 set laststatus=2
 "set spell " Turn on spell checking
 set spelllang=en_us " Define the region for spell checking
