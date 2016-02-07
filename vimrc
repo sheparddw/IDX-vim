@@ -176,7 +176,7 @@ nmap <C-l> <C-w>l
 nmap :sp :rightbelow sp<cr>
 
 " Map NerdTree for easy file navigation
-nmap <C-b> :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTreeToggle<cr>
 
 set mouse=a
 "Auto change directory to match current file ,cd
