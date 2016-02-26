@@ -177,8 +177,11 @@ nmap :sp :rightbelow sp<cr>
 
 " Map NerdTree for easy file navigation
 nmap <leader>nt :NERDTreeToggle<cr>
+" Fix bug with navigation issues in Nerdtree
+set encoding=utf-8
 
 set mouse=a
+
 "Auto change directory to match current file ,cd
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
