@@ -48,6 +48,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+command -bang Q quit<bang>
+
 " Options that require version 7.4 or higher.
 if v:version > 740
 	set fo+=j " Where it makes sense, remove a comment leader when joining lines.
