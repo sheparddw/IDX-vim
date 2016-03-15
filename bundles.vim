@@ -104,6 +104,8 @@ NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'scrooloose/syntastic'
 " Markdown runtime files
 NeoBundle 'tpope/vim-markdown'
+" Emmet HTML Shorthand
+NeoBundle 'mattn/emmet-vim'
 
 filetype plugin indent on     " required
 
