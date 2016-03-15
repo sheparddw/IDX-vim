@@ -165,9 +165,6 @@ set wildignore+=*/vendor/**
 set wildignore+=*/node_modules/**
 set wildignore+=*/public/forum/**
 
-" Open splits
-nmap vs :vsplit<cr>
-nmap sp :split<cr>
 " easier window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
